@@ -3,9 +3,10 @@ function getTime() {
     var hours = t.getHours();
     var minutes = t.getMinutes();
     var m;
-    if (hours > 12) {
+    if (hours >= 12) {
         m = "PM";
-        hours = hours - 12;
+        if (hours > 12)
+           hours = hours - 12;
     }
     else {
         m = "AM";

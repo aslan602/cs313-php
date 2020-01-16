@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Kyle's Homepage</title>
+    <link rel="stylesheet" type="text/css" href="homepage.css" />
+    <script src="homepage.js"></script>
+    <meta name="description" content="Kyles link to assignments and Kyle's intrests.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>Kyle's Homepage</h1>
+    </header>
+    <div class="col-2 col-s-2 border">
+        <a class="link" href="homepage.html">Homepage</a>
+    </div>
+    <div class="col-2 col-s-2 border">
+        <a class="link" href="assignments.html">Assignments</a>
+    </div>
+    <div class="col-2 col-s-2 border">
+        <a class="link">Future Link</a>
+    </div>
+    <div class="col-2 col-s-2 border">
+        <a class="link">Future Link</a>
+    </div>
+    <div class="col-2 col-s-2 border">
+        <a class="link">Future Link</a>
+    </div>
+    <div class="col-2 col-s-2 border">
+        <a class="link">Future Link</a>
+    </div>
+    <div>
+        <h1 class="interests">Kyle's Interests</h1>
+    </div>
+    <div class="col-4 col-s-4">
+        <img class="pics" src="minecraft.png" alt="minecraft realm" />
+    </div>
+    <div class="col-8 col-s-8">
+        <p class="title">Minecraft</p>
+        <p class="write">
+            This is a picture of my realm in Minecraft. I have been playing minecraft for many years, and built many different things.  This realm is my current project.
+            I share this realm with my family, some of which are out of state.  The nice thing about a realm in Minecraft is that it is on a dedicated server, so it is cloud
+            based.  Anyone who has access to the realm can get on at anytime from anywhere and play. I also play other video games, but Minecraft is my main game I play.
+        </p>
+    </div><br />
+    <div class="col-8 col-s-8">
+        <p class="title">Camping and the Outdoors</p>
+        <p class="write">
+            I love the outdoors, especially in the forest. Getting out and enjoying nature is a very relaxing activity to me.  Camping is just one way to get outdoors.
+            I also like to go fishing and hiking.  The picture is from a lookout spot near one of my favorite camping sites.
+        </p>
+    </div>
+    <div class="col-4 col-s-4">
+        <img class="pics" src="camping.jpg" alt="Camping Lookout" />
+    </div><br />
+    <div class="col-4 col-s-4">
+        <img class="pics" src="family.jpg" alt="Family" />
+    </div>
+    <div class="col-8 col-s-8">
+        <p class="title">Family</p>
+        <p class="write">
+            My family is the most important thing in my life.  Everything that we do in the church is about family.  God has made family a priority for all of his children.
+            One of the greatest truths we bear record of in the church is that families can be together forever.  I would be completely lost without my family.
+        </p>
+    </div><br />
+    <div class="space">
+
+    </div>
+
+    <div class="col-12 col-s-12 footer">
+        <div class="col-6 col-s-6 time">
+            <p>Click on button to get your current time.</p>
+            <input type="button" class="button" id="currentTime" value="Current Time" onclick="getTime()" /><br />
+            <p class="write" id="time"></p>
+        </div>
+        <div class="col-6 col-s-6 time">
+            <p>Click on button to get the server time.</p>
+            <input type="button" class="button" id="serverTime" value="Server Time" onclick="serverTime()" /><br />
+            <p class="write" id="displayServer"></p>
+        </div>
+    </div>
+
+   
+</body>
+</html>

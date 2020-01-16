@@ -51,6 +51,13 @@ function getTime() {
 }
 
 function serverTime() {
-    var time = "<?php echo &_time ?>";
-    document.getElementById("displayServer").innerHTML = time;
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("displayServer").innerHTML =
+                this.responseText;
+        }
+    };
+    xhttp.open("GET", "https://powerful-basin-71330.herokuapp.com/homepage.php", true);
+    xhttp.send();
 }

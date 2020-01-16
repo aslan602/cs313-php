@@ -1,5 +1,4 @@
 
 <?php
-$_time = date("h:i:sa");
-echo $_time;
+echo date("h:i:sa");
 ?>

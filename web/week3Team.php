@@ -14,16 +14,27 @@
 		?>
 	</div>
 	<div>
+	    <?php
 	    echo $_POST["email"];
-
+		?>
 	</div>
 	<div>
-	    echo &_POST["major"];
-
+	<?php
+	    echo $_POST["major"];
+    ?>
 	</div>
 	<div>
+	<?php
 	    echo $_POST["comments"];
+    ?>
 	</div>
+	<div> 
+	Continents:
+	<?php
+    for ($i = 0; $i < 7; $i++) {    if (isset($_POST['continent'.$i])){        echo $_POST["continent".$i];
+		}
+    };
+    </div>
 
 </body>
 </html>

@@ -10,7 +10,7 @@
     <div>
 	    Username:
 		<?php
-		$_POST["name"];
+		$_POST["name"]
 		?>
 	</div>
 	<div>

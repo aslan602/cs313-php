@@ -14,13 +14,15 @@
 		?>
 	</div>
 	<div>
+	    echo $_POST["email"];
 
 	</div>
 	<div>
+	    echo &_POST["major"];
 
 	</div>
 	<div>
-
+	    echo $_POST["comments"];
 	</div>
 
 </body>

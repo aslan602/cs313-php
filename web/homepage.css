@@ -110,9 +110,10 @@ header {
     border: 5px solid gold;
 }
 
-.construction {
-    padding: 500px;
-    font-size: 40px;
-    text-align:center;
-    color: aqua;
+.assignment {
+    text-align: center;
+    color: gold;
+    font-size: 2vw;
+    border: 2px solid gold;
+    padding: 25px;
 }

@@ -109,7 +109,7 @@ session_start();
 			<br /><br /><br />
 		</div>
 		<div class="col-3">
-			<img class="itemPic" src="jetpack.jpg" alt="JetPack" />
+			<img class="itemPic" src="jetPack.jpg" alt="JetPack" />
 		</div>
 		<div class="col-6 item">
 			<p>A Spectromatic JetPack</p>

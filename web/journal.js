@@ -23,3 +23,7 @@ function writeJournal() {
     alert("The write was entered!");
     window.location.href = "journal_write.php";
 }
+
+function gotomenu() {
+    window.location.href = "journal_menu.php";
+}

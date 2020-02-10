@@ -34,11 +34,8 @@
     <?php
     while ($row = $statement->fetch(PDO::FETCH_ASSOC))
     {
-       // The variable "row" now holds the complete record for that
-       // row, and we can access the different values based on their
-       // name
        $username = $row['username'];
-       echo "<a href='https://powerful-basin-71330.herokuapp.com/getusername.php?q=$username' " . $username . "</a><br />";
+       echo "<a href='https://powerful-basin-71330.herokuapp.com/getusername.php?q=$username' >" . $username . "</a><br />";
     }
     ?>
 

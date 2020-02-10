@@ -1,7 +1,11 @@
 ﻿<?php
-   session_start;
-   $name = $_SERVER['QUERY_STRING']
-   $_SESSION['username'] = $name;
+   session_start();
+
+   If ($_SESSION["username"] == null) {
+      $name = $_REQUEST["q"];
+      $_SESSION['username'] = $name;
+   }
+  
 ?>
 
 

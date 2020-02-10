@@ -38,7 +38,7 @@
        // row, and we can access the different values based on their
        // name
        $username = $row['username'];
-       echo "<a href='https://powerful-basin-71330.herokuapp.com/journal_menu.php?=$username' " . $username . "</a><br />";
+       echo "<a href='https://powerful-basin-71330.herokuapp.com/getusername.php?q=$username' " . $username . "</a><br />";
     }
     ?>
 

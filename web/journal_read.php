@@ -20,7 +20,7 @@
     </div>
     <div class="fancy col-6 littlePad">Journal Entry:</div>
     <div class="col-6">
-        <p class="center fancy pad">Hello <?php echo $_SESSION['username]; ?><br />Please select a journal entry to read<br /></p>
+        <p class="center fancy pad">Hello <?php echo $_SESSION['username']; ?><br />Please select a journal entry to read<br /></p>
     </div>
     <div class="col-5 read">
         <?php

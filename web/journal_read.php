@@ -22,11 +22,19 @@
     <div class="col-6">
         <p class="center fancy pad">Hello <?php echo $_SESSION['username']; ?><br />Please select a journal entry to read<br /></p>
     </div>
-    <div class="col-5 read">
+    <div class="col-5 read button">
         <?php
-           
+		    require "dbConnect.php";
+            $db = get_db();
+			$name = $_SESSION['username'];
+            $statement = $db->prepare("SELECT name_id FROM names WHERE username = ?");
+            $nameid = $statement->execute([$name]); 
+			$statement = $db->prepare("SELECT ts FROM journal WHERE name_id = ?")
+            $times = $statement->execute([$nameid]); 
+			foreach ($times as time) {
+				echo time;
+			}
         ?>
-
     </div>    
 </body>
 </html>

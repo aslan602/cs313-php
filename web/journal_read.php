@@ -30,8 +30,8 @@
             $statement = $db->prepare("SELECT name_id FROM names WHERE username = ?");
             $nameid = $statement->execute([$name]); 
 			$statement = $db->prepare("SELECT ts FROM journal WHERE name_id = ?");
-            $t = $statement->execute(array([$nameid]));
-			$times = $t->fetchAll();
+            $times = $statement->execute(array([$nameid]));
+			
 			echo "<p class='button'>" . $times . "</p><br />";
         ?>
     </div>    

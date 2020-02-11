@@ -32,7 +32,7 @@
 			$statement = $db->prepare("SELECT ts FROM journal WHERE name_id = ?");
             $t = $statement->execute(array([$nameid]));
 			$times = $t->fetchAll();
-			echo $times;
+			echo "<p class='button'>" . $times . "</p><br />";
         ?>
     </div>    
 </body>

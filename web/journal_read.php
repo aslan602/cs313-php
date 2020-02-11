@@ -28,7 +28,8 @@
             $db = get_db();
 			$name = $_SESSION['username'];
             $statement = $db->prepare("SELECT name_id FROM names WHERE username = ?");
-            $nameid = $statement->execute([$name]); 
+            $nameid = $statement->execute([$name]);
+			echo "<p class='fancy'>Here is the Timestamps for " . $name . "</p><br /><br />";
 			$statement = $db->prepare("SELECT ts FROM journal WHERE name_id = ?");
             $times = $statement->execute(array([$nameid]));
 			

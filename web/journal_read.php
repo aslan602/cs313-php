@@ -25,9 +25,9 @@
             $db = get_db();
 			$name = "'" . $_SESSION['username'] . "'";
             $statement = $db->prepare("SELECT name_id, username FROM names WHERE username = ?");			
-			$statement->execute([$name]);
+			$statement->execute($name);
 			$row = $statement->fetch(PDO::FETCH_ASSOC);
-			echo "<p class='center fancy pad'>This is name: " . $row . "</p>";
+			echo "<p class='center fancy pad'>This is row: " . $row . "</p>";
 			$nameId = $row['name_id'];
 			
 

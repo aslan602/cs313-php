@@ -23,8 +23,8 @@
 		 <?php
 		    require "dbConnect.php";
             $db = get_db();
-			$name = $_SESSION['username'];
-            $statement = $db->prepare("SELECT name_id FROM names WHERE username = '?'");            
+			$name = "'" . $_SESSION['username'] . "'";
+            $statement = $db->prepare("SELECT name_id FROM names WHERE username = ?");            
 			$nameId = $statement->execute([$name]);
 
 			echo "<p class='center fancy pad'>This is name: " . $name . " and this is id: " . $nameId . "</p>";

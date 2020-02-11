@@ -24,8 +24,9 @@
 		    require "dbConnect.php";
             $db = get_db();
 			$name = "'" . $_SESSION['username'] . "'";
-            $statement = $db->prepare("SELECT name_id, username FROM names WHERE username = ?");			
-			$statement->execute($name);
+            $statement = $db->prepare("SELECT name_id, username FROM names WHERE username = ?");
+			$statement->bindValue(1, $name, PDO::PARAM_STR);
+			$statement->execute();
 			$row = $statement->fetch(PDO::FETCH_ASSOC);
 			echo "<p class='center fancy pad'>This is row: " . $row . "</p>";
 			$nameId = $row['name_id'];

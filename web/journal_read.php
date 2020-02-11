@@ -26,10 +26,12 @@
 			$name = "'" . $_SESSION['username'] . "'";
             $statement = $db->prepare("SELECT name_id, username FROM names WHERE username = ?");			
 			$statement->execute([$name]);
-			$fetch = $statement->fetch(PDO::FETCH_ASSOC);
+			$row = $statement->fetch(PDO::FETCH_ASSOC);
+			echo "<p class='center fancy pad'>This is name: " . $row . "</p>";
+			$nameId = $row['name_id'];
 			
 
-			echo "<p class='center fancy pad'>This is name: " . $name . " and this is id: " . $fetch['name_id'] . "</p>";
+			echo "<p class='center fancy pad'>This is name: " . $name . " and this is id: " . $nameId . "</p>";
 			$statement = $db->prepare("SELECT ts FROM journal WHERE name_id = ?");
             $statement->execute([$nameId]);
 			while ($row = $statement->fetch(PDO::FETCH_ASSOC))

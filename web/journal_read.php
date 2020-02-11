@@ -20,24 +20,23 @@
     </div>    
     <div class="col-8">
         <p class="center fancy pad">Hello <?php echo $_SESSION['username']; ?><br />Please select a journal entry to read<br /></p>
-		 <?php
+		<?php
 		    require "dbConnect.php";
             $db = get_db();
 			$name = "'" . $_SESSION['username'] . "'";
             $statement = $db->prepare("SELECT name_id, username FROM names WHERE username = ?");			
 			$statement->execute([$name]);
 			$fetch = $statement->fetch(PDO::FETCH_ASSOC);
-			$nameId = $fetch['name_id'];
+			
 
-			echo "<p class='center fancy pad'>This is name: " . $name . " and this is id: " . $nameId . "</p>";
+			echo "<p class='center fancy pad'>This is name: " . $name . " and this is id: " . $fetch['name_id'] . "</p>";
 			$statement = $db->prepare("SELECT ts FROM journal WHERE name_id = ?");
             $statement->execute([$nameId]);
 			while ($row = $statement->fetch(PDO::FETCH_ASSOC))
             {
                $timestamp = $row['ts'];
                echo "<a class='button center' href='https://powerful-basin-71330.herokuapp.com/journal_readentry.php?q=$timestamp' >" . $timestamp . "</a><br />";
-            }
-			
+            }			
         ?>
     </div>
     <div class="col-5 read">

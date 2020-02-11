@@ -15,19 +15,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class="heading col-6">
+    <div class="heading col-8">
         Journal
     </div>    
-    <div class="col-6">
+    <div class="col-8">
         <p class="center fancy pad">Hello <?php echo $_SESSION['username']; ?><br />Please select a journal entry to read<br /></p>
 		 <?php
 		    require "dbConnect.php";
             $db = get_db();
 			$name = $_SESSION['username'];
-            $statement = $db->prepare("SELECT name_id FROM names WHERE username = ?");
-            $statement->execute([$name]);
-			$nameId = $statement->fetch(PDO::FETCH_ASSOC);
-			echo "<p>This is name: " . $name . "and this is id: " . $nameId . "</p>";
+            $statement = $db->prepare("SELECT name_id FROM names WHERE username = ?");            
+			$nameId = $statement->execute([$name]);
+
+			echo "<p>This is name: " . $name . " and this is id: " . $nameId . "</p>";
 			$statement = $db->prepare("SELECT ts FROM journal WHERE name_id = ?");
             $statement->execute([$nameId]);
 			while ($row = $statement->fetch(PDO::FETCH_ASSOC))

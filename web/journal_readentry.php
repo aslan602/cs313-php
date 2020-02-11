@@ -16,10 +16,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class="heading col-6">
+    <div class="heading col-8">
         Journal
     </div>
-    <div class="fancy col-6 littlePad">Journal Entry for Time Stamp " <?php echo $_SESSION['timestamp'] ?></div>
+    <div class="fancy col-8 littlePad">Journal Entry for Time Stamp " <?php echo $_SESSION['timestamp'] ?></div>
     <div class="col-9 namelist">
        <?php
           $timestamp = $_SESSION["timestamp"];

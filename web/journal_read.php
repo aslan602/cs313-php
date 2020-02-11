@@ -29,11 +29,9 @@
 			$name = $_SESSION['username'];
             $statement = $db->prepare("SELECT name_id FROM names WHERE username = ?");
             $nameid = $statement->execute([$name]); 
-			$statement = $db->prepare("SELECT ts FROM journal WHERE name_id = ?")
+			$statement = $db->prepare("SELECT ts FROM journal WHERE name_id = ?");
             $times = $statement->execute([$nameid]); 
-			foreach ($times as time) {
-				echo time;
-			}
+			echo $times;
         ?>
     </div>    
 </body>

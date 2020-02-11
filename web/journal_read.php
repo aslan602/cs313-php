@@ -29,11 +29,13 @@
 			$name = $_SESSION['username'];
             $statement = $db->prepare("SELECT name_id FROM names WHERE username = ?");
             $nameid = $statement->execute([$name]);
-			echo "<p class='fancy'>Here is the Timestamps for " . $name . "</p><br /><br />";
+			echo "<p class='fancy'>Here is the Timestamps for " . $name . "and the name_id is " . $nameid . "</p><br /><br />";
 			$statement = $db->prepare("SELECT ts FROM journal WHERE name_id = ?");
             $times = $statement->execute(array([$nameid]));
+			foreach ($times as $time) {
+			   echo "<p class='button'>" . $time . "</p><br />";
+			}
 			
-			echo "<p class='button'>" . $times . "</p><br />";
         ?>
     </div>    
 </body>

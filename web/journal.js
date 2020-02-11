@@ -9,18 +9,15 @@ function enterUser() {
         }
     };
     xhttp.open("GET", "getusername.php?q=" + name, true);
-    xhttp.send();
-    alert("The user was entered!");
+    xhttp.send();    
     window.location.href = "journal_menu.php";
 }
 
-function read() {
-    alert("The read was entered!");
+function read() {    
     window.location.href = "journal_read.php";
 }
 
-function writeJournal() {
-    alert("The write was entered!");
+function writeJournal() {    
     window.location.href = "journal_write.php";
 }
 

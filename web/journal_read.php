@@ -26,7 +26,8 @@
 			$name = "'" . $_SESSION['username'] . "'";
             $statement = $db->prepare("SELECT name_id FROM names WHERE username = ?");
 			$statement->bindValue(1, $name, PDO::PARAM_STR);
-			$nameId = $statement->execute();
+			$statement->execute();
+			$nameid = $statement->fetch(PDO::FETCH_ASSOC);
 
 			echo "<p class='center fancy pad'>This is name: " . $name . " and this is id: " . $nameId . "</p>";
 			$statement = $db->prepare("SELECT ts FROM journal WHERE name_id = ?");

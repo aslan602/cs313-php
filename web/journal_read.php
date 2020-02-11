@@ -24,9 +24,8 @@
 		    require "dbConnect.php";
             $db = get_db();
 			$name = "'" . $_SESSION['username'] . "'";
-            $statement = $db->prepare("SELECT name_id FROM names WHERE username = ?");
-			$statement->bindValue(1, $name, PDO::PARAM_STR);
-			$statement->execute();
+            $statement = $db->prepare("SELECT name_id FROM names WHERE username = ?");			
+			$statement->execute([$name]);
 			$fetch = $statement->fetch(PDO::FETCH_ASSOC);
 			$nameId = $fetch['name_id'];
 
@@ -36,7 +35,7 @@
 			while ($row = $statement->fetch(PDO::FETCH_ASSOC))
             {
                $timestamp = $row['ts'];
-               echo "<a href='https://powerful-basin-71330.herokuapp.com/journal_readentry.php?q=$timestamp' >" . $timestamp . "</a><br />";
+               echo "<a class='button center' href='https://powerful-basin-71330.herokuapp.com/journal_readentry.php?q=$timestamp' >" . $timestamp . "</a><br />";
             }
 			
         ?>

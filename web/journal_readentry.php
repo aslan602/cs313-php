@@ -27,7 +27,7 @@
           $db = get_db();
           $statement = $db->prepare("SELECT entry FROM journal WHERE ts = ?");
           $statement->execute([$timestamp]);
-		  &entry = $statement->fetch(PDO::FETCH_ASSOC);
+		  $entry = $statement->fetch(PDO::FETCH_ASSOC);
           echo "<p class='namelist'>" . $entry . "</p>";
        ?>
     </div>

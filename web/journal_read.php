@@ -27,7 +27,7 @@
 			$name = $_SESSION['username'];
             $statement = $db->prepare("SELECT name_id FROM names WHERE username = ?");
             $statement->execute([$name]);
-			&nameId = $statement->fetch(PDO::FETCH_ASSOC);
+			$nameId = $statement->fetch(PDO::FETCH_ASSOC);
 			$statement = $db->prepare("SELECT ts FROM journal WHERE name_id = ?");
             $statement->execute([$nameId]);
 			while ($row = $statement->fetch(PDO::FETCH_ASSOC))

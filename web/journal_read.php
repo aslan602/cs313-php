@@ -27,7 +27,7 @@
             $statement = $db->prepare("SELECT name_id FROM names WHERE username = ?");            
 			$nameId = $statement->execute([$name]);
 
-			echo "<p>This is name: " . $name . " and this is id: " . $nameId . "</p>";
+			echo "<p class='center fancy pad'>This is name: " . $name . " and this is id: " . $nameId . "</p>";
 			$statement = $db->prepare("SELECT ts FROM journal WHERE name_id = ?");
             $statement->execute([$nameId]);
 			while ($row = $statement->fetch(PDO::FETCH_ASSOC))

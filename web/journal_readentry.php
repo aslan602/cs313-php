@@ -1,5 +1,5 @@
 ﻿<?php
-   start_session();
+   session_start();
    $timestamp = $_REQUEST["q"];
    $_SESSION["timestamp"] = $timestamp;
 ?>

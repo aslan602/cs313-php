@@ -29,10 +29,10 @@
 		  }
           require "dbConnect.php";
           $db = get_db();
-		  $timestamp = "'" . $timestamp . "'";
+		  //$timestamp = "'" . $timestamp . "'";
 		  echo "Timestamp is now: " . $timestamp;
           $statement = $db->prepare("SELECT entry FROM journal WHERE ts = :timest");
-		  $statement->bindValue(":timest", $timestamp, PARAM_INT);
+		  $statement->bindValue(":timest", $timestamp, PDO::PARAM_STR);
           $statement->execute();
 		  $rows = $statement->fetchAll();
 		  if ($rows == null) {

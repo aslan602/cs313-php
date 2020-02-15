@@ -11,7 +11,7 @@
    $db = get_db();
    $statement = $db->prepare("SELECT name_id FROM names WHERE username = :officalname"); //get the correct name_id from the username
    $fullname = "'" . $officalname . "'";  //Put quotes around the name for the database
-   $statement->bindValue(":officalname", $fullname, PDO::PARAM_STR);
+   $statement->bindValue(":officalname", $officalname, PDO::PARAM_STR);
    $statement->execute();
    $row = $statement->fetch(PDO::FETCH_ASSOC);
    $_SESSION["name_id"] = $row["name_id"];  //after getting the name-id from the database, assign it to a session variable

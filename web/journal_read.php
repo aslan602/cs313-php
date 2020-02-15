@@ -21,15 +21,13 @@
     <div class="timelistpad">
         <p class="fancy">Hello <?php echo $_SESSION['username']; ?><br />Please select a journal entry to read<br /></p>
 		<?php
-		    $id = $_SESSION["name_id"];
-			echo "<p class='fancy'>This is id: " . $id . "</p>";    
+		    $id = $_SESSION["name_id"];			
 		    require "dbConnect.php";
             $db = get_db();			
             $statement = $db->prepare("SELECT ts FROM journal WHERE name_id = :id");
 			$statement->bindValue(":id", $id, PDO::PARAM_INT);
 			$statement->execute();
-			$rows = $statement->fetchAll();
-			echo "<p class='timestamp'>This is row: " . $rows . "</p>";          
+			$rows = $statement->fetchAll();			         
 			foreach ($rows as $row)
             {
                $timestamp = $row['ts'];

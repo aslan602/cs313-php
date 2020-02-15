@@ -19,7 +19,7 @@
     <div class="heading col-8">
         Journal
     </div>
-    <div class="fancy col-8 littlePad">Journal Entry for Time Stamp " <?php echo $_SESSION['timestamp'] ?></div>
+    <div class="fancy col-8 timestamppad">Journal Entry for Time Stamp " <?php echo $_SESSION['timestamp'] ?></div>
     <div class="col-9 namelist">
        <?php
           $timestamp = "'" . $_SESSION["timestamp"] . "'";

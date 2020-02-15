@@ -28,9 +28,7 @@
 			  die();
 		  }
           require "dbConnect.php";
-          $db = get_db();
-		  //$timestamp = "'" . $timestamp . "'";
-		  echo "Timestamp is now: " . $timestamp;
+          $db = get_db();		  
           $statement = $db->prepare("SELECT entry FROM journal WHERE ts = :timest");
 		  $statement->bindValue(":timest", $timestamp, PDO::PARAM_STR);
           $statement->execute();
@@ -38,8 +36,7 @@
 		  if ($rows == null) {
 		  	  echo "Timestamp ROWS is not set!";
 			  die();
-		  }
-		  echo "Rows is: " . $rows;
+		  }		  
 		  foreach ($rows as $row) {
 		     $entry = $row["entry"];
              echo "<p> $entry </p>";

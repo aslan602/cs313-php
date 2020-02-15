@@ -138,6 +138,14 @@ input.ex1:hover {
     padding-left: 600px;
 }
 
+.readheading {    
+    font-size: 150px;
+    font-family: Parchment;
+    color: blue;
+    padding-top: 100px;
+    padding-left: 700px;
+}
+
 div {
     border: 2px solid red;
 }

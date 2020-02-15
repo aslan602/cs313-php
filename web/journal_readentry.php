@@ -22,13 +22,13 @@
     <div class="fancy col-8 littlePad">Journal Entry for Time Stamp " <?php echo $_SESSION['timestamp'] ?></div>
     <div class="col-9 namelist">
        <?php
-          $timestamp = $_SESSION["timestamp"];
+          $timestamp = "'" . $_SESSION["timestamp"] . "'";
           require "dbConnect.php";
           $db = get_db();
           $statement = $db->prepare("SELECT entry FROM journal WHERE ts = :timest");
 		  $statement->bindValue(":timest", $timestamp, PARAM_INT);
           $statement->execute();
-		  $entry = $statement->fetch();
+		  $entry = $statement->fetchAll();
           echo "<p class='namelist'> $entry </p>";
        ?>
     </div>

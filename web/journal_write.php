@@ -18,12 +18,12 @@
     <div class="heading col-8">
         Journal
     </div>
-	 <div class="timelistpad">
-        <p class="fancy">Hello <?php echo $_SESSION['username']; ?><br />Write you journal entry then press save.<br /></p>
+	 <div class="col-8 fancy pad">
+        <p>Hello <?php echo $_SESSION['username']; ?><br />Write you journal entry then press save.<br /></p>
 	</div>
     <div class="col-6 timestamppad">
 	   <form action="write_to_journal.php" method="post">
-	      <textarea name="entry" rows="50" cols="250"></textarea>
+	      <textarea name="entry" rows="40" cols="100"></textarea>
 		  <p><br /></p>
 		  <input class="button center" type="submit" value="SAVE">
 	   </form>

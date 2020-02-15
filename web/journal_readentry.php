@@ -29,8 +29,11 @@
 		  $statement->bindValue(":timest", $timestamp, PARAM_INT);
           $statement->execute();
 		  $rows = $statement->fetchAll();
-		  $entry = $rows["entry"];
-          echo "<p class='namelist'> $entry </p>";
+		  foreach ($rows as $row) {
+		     $entry = $row["entry"];
+             echo "<p> $entry </p>";
+		  }
+		  
        ?>
     </div>
 

@@ -17,11 +17,8 @@
 <body>
     <div class="heading col-8">
         Journal
-    </div>  
-	<div class="col-5">
-	<p><br /></p>
-	</div>
-    <div class="col-8">
+    </div>	
+    <div class="timelistpad">
         <p class="fancy">Hello <?php echo $_SESSION['username']; ?><br />Please select a journal entry to read<br /></p>
 		<?php
 		    $id = $_SESSION["name_id"];

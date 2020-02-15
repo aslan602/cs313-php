@@ -109,7 +109,7 @@ input.ex1:hover {
 .littlePad {
     padding-top: 110px;
     padding-bottom: 100px;
-  padding-left: 200px;
+  padding-left: 400px;
 }
 
 .read {
@@ -132,6 +132,10 @@ input.ex1:hover {
     color: blue;
     font-size: 30px;  
     font-family: 'Times New Roman', Times, serif;
+}
+
+.timelistpad {
+    padding-left: 600px;
 }
 
 div {

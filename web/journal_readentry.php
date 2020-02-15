@@ -28,8 +28,8 @@
           $statement = $db->prepare("SELECT entry FROM journal WHERE ts = :timest");
 		  $statement->bindValue(":timest", $timestamp, PARAM_INT);
           $statement->execute();
-		  $entry = $statement->fetch(PDO::FETCH_ASSOC);
-          echo "<p class='namelist'>" . $entry . "</p>";
+		  $entry = $statement->fetch();
+          echo "<p class='namelist'> $entry </p>";
        ?>
     </div>
 

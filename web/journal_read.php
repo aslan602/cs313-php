@@ -28,7 +28,7 @@
             $statement = $db->prepare("SELECT ts FROM journal WHERE name_id = :id");
 			$statement->bindValue(":id", $id, PDO::PARAM_INT);
 			$statement->execute();
-			$rows = $statement->fetch(PDO::FETCH_COLUMN);
+			$rows = $statement->fetch();
 			echo "<p class='center fancy pad'>This is row: " . $rows . "</p>";          
 			foreach ($rows as $row)
             {

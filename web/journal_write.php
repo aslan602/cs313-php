@@ -1,5 +1,6 @@
 ﻿<?php
-   session_start;
+   session_start();
+
 ?>
 
 
@@ -14,11 +15,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class="heading col-6">
+    <div class="heading col-8">
         Journal
     </div>
-    <div class="col-8">
-        <p class="center fancy pad">This page is coming soon!</p>
+	 <div class="timelistpad">
+        <p class="fancy">Hello <?php echo $_SESSION['username']; ?><br />Write you journal entry then press save.<br /></p>
+	</div>
+    <div class="col-6">
+	   <form action="write_to_journal.php" method="post">
+	      <textarea name="entry" rows="100" cols="50"></textarea>
+		  <p><br /></p>
+		  <input class="button center" type="submit" value="SAVE">
+	   </form>
+        
+
     </div>
 
 </body>

@@ -25,8 +25,9 @@
           $timestamp = $_SESSION["timestamp"];
           require "dbConnect.php";
           $db = get_db();
-          $statement = $db->prepare("SELECT entry FROM journal WHERE ts = ?");
-          $statement->execute([$timestamp]);
+          $statement = $db->prepare("SELECT entry FROM journal WHERE ts = :timest");
+		  $statement->bindValue(":timest", $timestamp, PARAM_INT);
+          $statement->execute();
 		  $entry = $statement->fetch(PDO::FETCH_ASSOC);
           echo "<p class='namelist'>" . $entry . "</p>";
        ?>

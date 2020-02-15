@@ -17,12 +17,15 @@
 <body>
     <div class="heading col-8">
         Journal
-    </div>    
+    </div>  
+	<div class="col-5">
+	<p><br /></p>
+	</div>
     <div class="col-8">
-        <p class="center fancy pad">Hello <?php echo $_SESSION['username']; ?><br />Please select a journal entry to read<br /></p>
+        <p class="fancy">Hello <?php echo $_SESSION['username']; ?><br />Please select a journal entry to read<br /></p>
 		<?php
 		    $id = $_SESSION["name_id"];
-			echo "<p class='center fancy pad'>This is id: " . $id . "</p>";    
+			echo "<p class='fancy'>This is id: " . $id . "</p>";    
 		    require "dbConnect.php";
             $db = get_db();			
             $statement = $db->prepare("SELECT ts FROM journal WHERE name_id = :id");

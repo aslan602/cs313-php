@@ -58,12 +58,12 @@
     padding-top: 100px;    
 }
 
-.heading {
-    text-align: center;
+.heading {  
     font-size: 150px;
     font-family: Parchment;
     color: blue;
     padding-top: 100px;
+    padding-left: 400px;
 
 }
 
@@ -143,13 +143,21 @@ input.ex1:hover {
     font-family: Parchment;
     color: blue;
     padding-top: 100px;
-    padding-left: 400px;
+    padding-left: 500px;
 }
 
 .timestamppad {
     padding-top: 110px;
     padding-bottom: 100px;
-    padding-left: 300px;
+    padding-left: 350px;
+}
+
+.entryreadout {
+    color: blue;
+    font-size: 30px;
+    text-align: right;
+    height: 500px;
+    padding-left: 350px;
 }
 
 div {

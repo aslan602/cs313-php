@@ -20,7 +20,7 @@
         Journal
     </div>
     <div class="fancy col-8 timestamppad">Journal Entry for Time Stamp: <?php echo $_SESSION['timestamp'] ?></div>
-    <div class="col-9 namelist">
+    <div class="col-6 entryreadout">
        <?php
           $timestamp = $_SESSION["timestamp"];
           require "dbConnect.php";
@@ -28,7 +28,8 @@
           $statement = $db->prepare("SELECT entry FROM journal WHERE ts = :timest");
 		  $statement->bindValue(":timest", $timestamp, PARAM_INT);
           $statement->execute();
-		  $entry = $statement->fetchAll();
+		  $rows = $statement->fetchAll();
+		  $entry = $rows["entry"];
           echo "<p class='namelist'> $entry </p>";
        ?>
     </div>

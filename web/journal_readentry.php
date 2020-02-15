@@ -23,12 +23,23 @@
     <div class="col-6 entryreadout">
        <?php
           $timestamp = $_SESSION["timestamp"];
+		  if ($timestamp == null) {
+		  	  echo "ERROR SETTING TIMESTAMP!";
+			  die();
+		  }
           require "dbConnect.php";
           $db = get_db();
+		  $timestamp = "'" . $timestamp . "'";
+		  echo "Timestamp is now: " . $timestamp;
           $statement = $db->prepare("SELECT entry FROM journal WHERE ts = :timest");
 		  $statement->bindValue(":timest", $timestamp, PARAM_INT);
           $statement->execute();
 		  $rows = $statement->fetchAll();
+		  if ($rows == null) {
+		  	  echo "Timestamp ROWS is not set!";
+			  die();
+		  }
+		  echo "Rows is: " . $rows;
 		  foreach ($rows as $row) {
 		     $entry = $row["entry"];
              echo "<p> $entry </p>";

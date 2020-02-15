@@ -24,8 +24,8 @@
 		    $id = $_SESSION["name_id"];
 		    require "dbConnect.php";
             $db = get_db();			
-            $statement = $db->prepare("SELECT ts FROM journal WHERE name_id = ?");
-			$statement->bindValue(1, $name, PDO::PARAM_STR);
+            $statement = $db->prepare("SELECT ts FROM journal WHERE name_id = :id");
+			$statement->bindValue(":id", $id, PDO::PARAM_INT);
 			$statement->execute();
 			$rows = $statement->fetch(PDO::FETCH_ASSOC);
 			echo "<p class='center fancy pad'>This is row: " . $rows . "</p>";          

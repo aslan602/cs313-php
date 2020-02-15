@@ -1,6 +1,13 @@
 ﻿<?php
    session_start();
-
+   if ($_SESSION["username"] == null) {
+   	   echo "ERROR! NO USER NAME IN WRITE!";
+	   die();
+   }
+    if ($_SESSION["name_id"] == null) {
+   	   echo "ERROR! NO USER ID IN WRITE!";
+	   die();
+   }
 ?>
 
 
@@ -23,7 +30,7 @@
 	</div>
     <div class="col-6 timestamppad">
 	   <form action="write_to_journal.php" method="post">
-	      <textarea name="entry" rows="30" cols="75"></textarea>
+	      <textarea name="entry" rows="30" cols="75" name="journal_entry"></textarea>
 		  <p><br /></p>
 		  <input class="button center" type="submit" value="SAVE">
 	   </form>

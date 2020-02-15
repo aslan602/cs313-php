@@ -159,6 +159,10 @@ input.ex1:hover {
     padding-left: 350px;
 }
 
+.biggerpad {
+    padding-left: 350px;
+}
+
 //div {
     border: 2px solid red;
 }

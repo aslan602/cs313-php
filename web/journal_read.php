@@ -29,11 +29,11 @@
 			$statement->bindValue(":id", $id, PDO::PARAM_INT);
 			$statement->execute();
 			$rows = $statement->fetch(PDO::FETCH_ASSOC);
-			echo "<p class='center fancy pad'>This is row: " . $rows . "</p>";          
+			echo "<p class='timestamp'>This is row: " . $rows . "</p>";          
 			foreach ($rows as $row)
             {
                $timestamp = $row['ts'];
-               echo "<a class='button center' href='https://powerful-basin-71330.herokuapp.com/journal_readentry.php?q=$timestamp' >" . $timestamp . "</a><br />";
+               echo "<a class='timestamp' href='https://powerful-basin-71330.herokuapp.com/journal_readentry.php?q=$timestamp' >" . $timestamp . "</a><br />";
             }			
         ?>
     </div>      

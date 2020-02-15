@@ -128,6 +128,13 @@ input.ex1:hover {
     padding-left: 60px;
 }
 
+.timestamp {
+    color: blue;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
 div {
     border: 2px solid red;
 }

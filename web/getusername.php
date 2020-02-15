@@ -6,12 +6,6 @@
    	   die();
    }
    $_SESSION["username"] = $tempname;
-   require "dbConnect.php";
-   $db = get_db();
-   $tname = "'" . $tempname . "'";
-   $statement = $db->prepare("INSERT INTO names (username) VALUES (:newname)");
-   $statement->bindValue(":newname", $tname, PDO::PARAM_STR);
-   $statement->execute();
 ?>
 
  <!DOCTYPE html>

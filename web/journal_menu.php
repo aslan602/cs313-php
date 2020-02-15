@@ -1,10 +1,7 @@
 ﻿<?php
    session_start();
 
-   if ($_SESSION["username"] == null) { // make sure the username session variable is set.  If not then set it.
-      $name = $_REQUEST["q"];
-      $_SESSION['username'] = $name;
-   }
+  
    if ($_SESSION["username"] == null) { //session variable is set or die!
    	   echo "ERROR GETTING NAME!";
 	   die();
@@ -18,6 +15,10 @@
    $statement->execute();
    $row = $statement->fetch(PDO::FETCH_ASSOC);
    $_SESSION["name_id"] = $row["name_id"];  //after getting the name-id from the database, assign it to a session variable
+   if ($_SESSION["name_id"] == null) {
+   	   echo "ERROR CREATING NAME ID!";
+	   die();
+   }
 ?>
 
 

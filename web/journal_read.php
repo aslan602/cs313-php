@@ -28,7 +28,7 @@
             $statement = $db->prepare("SELECT ts FROM journal WHERE name_id = :id");
 			$statement->bindValue(":id", $id, PDO::PARAM_INT);
 			$statement->execute();
-			$rows = $statement->fetch(PDO::FETCH_ASSOC);
+			$rows = $statement->fetch(PDO::FETCH_COLUMN);
 			echo "<p class='center fancy pad'>This is row: " . $rows . "</p>";          
 			foreach ($rows as $row)
             {
@@ -36,9 +36,6 @@
                echo "<a class='button center' href='https://powerful-basin-71330.herokuapp.com/journal_readentry.php?q=$timestamp' >" . $timestamp . "</a><br />";
             }			
         ?>
-    </div>
-    <div class="col-5 read">
-       
-    </div>    
+    </div>      
 </body>
 </html>

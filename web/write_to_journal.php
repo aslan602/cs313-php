@@ -8,7 +8,8 @@
    	   echo "ERROR! NO USER ID IN WRITE!";
 	   die();
    }
-   $journalentry = htmlspecialchars($_POST["journal_entry"]);
+   $post = $_POST["journal_entry"];
+   $journalentry = htmlspecialchars($post);
    if ($journalentry == null) {
    	   echo "ERROR GETTING ENTRY FROM WRITE!";
 	   die();

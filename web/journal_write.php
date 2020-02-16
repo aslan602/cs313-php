@@ -32,7 +32,7 @@
 	   <form action="write_to_journal.php" method="post">
 	      <textarea name="entry" rows="30" cols="75" name="journal_entry"></textarea>
 		  <p><br /></p>
-		  <input class="button center" type="submit" value="SAVE">
+		  <input class="button center ex1" type="submit" value="SAVE">
 	   </form>
         
 

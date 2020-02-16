@@ -9,7 +9,8 @@
 	   die();
    }
    $post = $_POST["journal_entry"];
-   $journalentry = htmlspecialchars($post);
+   //$journalentry = htmlspecialchars($post);
+   $journalentry = $post;
    if ($journalentry == null) {
    	   echo "ERROR GETTING ENTRY FROM WRITE!";
 	   die();

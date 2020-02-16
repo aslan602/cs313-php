@@ -21,7 +21,7 @@
    require "dbConnect.php";
           $db = get_db();		  
           $statement = $db->prepare("INSERT INTO journal (name_id, entry, ts) VALUES (:id, :entry, now())");
-		  $statement->bingValue(":id", $id, PDO::PARAM_INT);
+		  $statement->bindValue(":id", $id, PDO::PARAM_INT);
 		  $statement->bindValue(":entry", $entry, PDO::PARAM_STR);
           $statement->execute();
 ?>

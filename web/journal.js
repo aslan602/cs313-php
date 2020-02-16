@@ -28,7 +28,7 @@ function savewrite() {
 function gotowrite() {
     var entry = document.getElementById("write").value;
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "write_to_journal.php", true);   
-    xhttp.send(entry);
+    xhttp.open("GET", "write_to_journal.php?q=" + entry, true);   
+    xhttp.send();
     window.location.href = "write_to_journal.php";
 }

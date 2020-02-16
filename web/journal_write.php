@@ -30,9 +30,9 @@
 	</div>
     <div class="col-6 timestamppad">
 	   <form action="write_to_journal.php" method="post">
-	      <textarea name="entry" rows="30" cols="75" name="write"></textarea>
+	      <textarea name="entry" rows="30" cols="75" id="write"></textarea>
 		  <p><br /></p>
-		  <input class="button ex1" type="submit" value="SAVE">
+		  <input class="button ex1" type="button" value="SAVE" onclick="gotowrite()">
 	   </form>
         
 

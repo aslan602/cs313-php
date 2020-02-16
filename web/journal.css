@@ -163,6 +163,11 @@ input.ex1:hover {
     padding-left: 350px;
 }
 
+.entryenter {
+    height: 700px;
+    width: 400px;
+}
+
 //div {
     border: 2px solid red;
 }

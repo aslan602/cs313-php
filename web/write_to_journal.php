@@ -9,6 +9,7 @@
 	   die();
    }
    $post = $_POST["journal_entry"];
+   echo "This is what came from write:" . $post;
    //$journalentry = htmlspecialchars($post);
    $journalentry = $post;
    if ($journalentry == null) {

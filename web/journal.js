@@ -24,11 +24,3 @@ function savewrite() {
     alert("Your journal entry was saved");
     window.location.href = "journal_menu.php";
 }
-
-function gotowrite() {
-    var entry = document.getElementById("write").value;
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "write_to_journal.php?q=" + entry, true);   
-    xhttp.send();
-    window.location.href = "write_to_journal.php";
-}

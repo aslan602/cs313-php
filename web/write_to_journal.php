@@ -8,14 +8,12 @@
    	   echo "ERROR! NO USER ID IN WRITE!";
 	   die();
    }
-   $post = $_POST["entry"];
-   echo "This is what came from write:" . $post . "<br />";
+   $post = $_POST["entry"];  
    $journalentry = htmlspecialchars($post);   
    if ($journalentry == null) {
    	   echo "ERROR GETTING ENTRY FROM WRITE!";
 	   die();
-   }
-   die();
+   }   
    $name = $_SESSION["username"];
    $id = $_SESSION["name_id"];
    $entry = "'" . $journalentry . "'";

@@ -36,7 +36,16 @@
         <script src="journal.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body onload="savewrite()">
+    <body>
+	 <div class="headingStart col-8">
+            Journal
+        </div>
+        <div class="col-6">
+           <p class="center fancy pad">Journal entry saved successfully!</p><br /> <br />
+        </div>
+		<div class="col-12 biggestpad">
+		   <input type="button" value="Continue" class="button ex1" onclick="returntomenu()" /><br /><br />
+		</div>
 
 	</body>
 	</html>

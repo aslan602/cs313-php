@@ -172,6 +172,10 @@ input.ex1:hover {
     padding-top: 200px;
 }
 
+.biggestpad {
+    padding-left: 500px;
+}
+
 //div {
     border: 2px solid red;
 }

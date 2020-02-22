@@ -20,11 +20,6 @@ function gotomenu() {
     window.location.href = "journal_menu.php";
 }
 
-function savewrite() {
-    alert("Your journal entry was saved");
-    window.location.href = "journal_menu.php";
-}
-
 function createaccount() {
     window.location.href = "create.php";
 }

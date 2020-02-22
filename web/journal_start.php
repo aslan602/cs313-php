@@ -22,27 +22,15 @@
             Journal
         </div>
         <div class="col-6">
-<p class="center fancy pad">Please select a user:</p>
-    </div>
-<div class="col-4 center fancy">
-    OR enter a new user: <br />
-    <input class="entername" type="text" id="username" />
-    <br />
-    <input type="button" value="Enter Name" class="button ex1" onclick="enterUser()" />
-</div>
-<div class="col-4 namelist">
-    <?php
-    while ($row = $statement->fetch(PDO::FETCH_ASSOC))
-    {
-       $username = $row['username'];
-       echo "<a href='https://powerful-basin-71330.herokuapp.com/getusername.php?q=$username' >" . $username . "</a><br />";
-    }
-    ?>
+           <p class="center fancy pad">Please select an action:</p><br /> <br />
+        </div>
+		<div class="col-4">
+		   <input type="button" value="Create Account" class="button ex1" onclick="createaccount()" />
+		</div>
+		<div>
+		   <input type="button" value="Sign In" class="button ex1" onclick="signin()" />
+		</div>
 
-</div>
-<div class="col-2 namelist">
 
-</div>
-
-</body>
-</html>
+    </body>
+    </html>

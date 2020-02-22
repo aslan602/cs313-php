@@ -27,9 +27,8 @@
 		<div class="col-12">
 		   <br />
 		</div>
-		<div class="col-3">
-		</div>
-		<div class="col-2">
+		
+		<div class="col-2 biggerpad">
 		   <input type="button" value="Create Account" class="button ex1" onclick="createaccount()" />
 		</div>
 		<div class="col-2">

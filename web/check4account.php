@@ -70,8 +70,13 @@ if ($badLogin)
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    </head>
-   <body onload="incorrect()">
-    
+   <body>
+    <div class="middletop toppad">
+        <h1>Incorrect Password.  Please try again.</h1><br />       
+    </div>
+     <div class="centerbutton">
+        <input class="ex1" type="button" value="Continue" id="continue" name="continue" onclick="continue()" />
+    </div>
    </body>
    </html>
 

@@ -4,7 +4,6 @@ function createaccount() {
     window.location.href = "create.php";
 }
 
-function incorrect() {
-    alert("Incorrect Password.  Try Again!");
+function continue() {    
     window.location.href = "sign_in.php";
 }

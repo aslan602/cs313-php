@@ -32,3 +32,7 @@ function createaccount() {
 function signin() {
     window.location.href = "sign_in.php";
 }
+
+function returntomenu() {
+    window.location.href = "journal_menu.php";
+}

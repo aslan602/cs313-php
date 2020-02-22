@@ -9,12 +9,12 @@
    require "dbConnect.php";
    $officalname = $_SESSION["username"]; //get the username and assign it to a variable to use later
    $db = get_db();
-   $statement = $db->prepare("SELECT name_id FROM names WHERE username = :officalname"); //get the correct name_id from the username
+   $statement = $db->prepare("SELECT id FROM journalaccounts WHERE username = :officalname"); //get the correct name_id from the username
    $fullname = "'" . $officalname . "'";  //Put quotes around the name for the database
    $statement->bindValue(":officalname", $officalname, PDO::PARAM_STR);
    $statement->execute();
    $row = $statement->fetch(PDO::FETCH_ASSOC);
-   $_SESSION["name_id"] = $row["name_id"];  //after getting the name-id from the database, assign it to a session variable
+   $_SESSION["name_id"] = $row["id"];  //after getting the name-id from the database, assign it to a session variable
    if ($_SESSION["name_id"] == null) {
    	   echo "ERROR CREATING NAME ID!";
 	   die();

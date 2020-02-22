@@ -31,7 +31,7 @@
 		<div class="col-2 biggerpad">
 		   <input type="button" value="Create Account" class="button ex1" onclick="createaccount()" />
 		</div>
-		<div class="col-2">
+		<div class="col-2 buttonpad">
 		   <input type="button" value="Sign In" class="button ex1" onclick="signin()" />
 		</div>
 

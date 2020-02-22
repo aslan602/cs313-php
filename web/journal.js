@@ -24,3 +24,11 @@ function savewrite() {
     alert("Your journal entry was saved");
     window.location.href = "journal_menu.php";
 }
+
+function createaccount() {
+    window.location.href = "create.php";
+}
+
+function signin() {
+    window.location.href = "sign_in.php";
+}

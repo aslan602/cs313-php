@@ -24,6 +24,8 @@
         <div class="col-6">
            <p class="center fancy pad">Please select an action:</p><br /> <br />
         </div>
+		<div class="col-11">
+		</div>
 		<div class="col-4">
 		   <input type="button" value="Create Account" class="button ex1" onclick="createaccount()" />
 		</div>

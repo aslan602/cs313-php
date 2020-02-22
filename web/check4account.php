@@ -75,7 +75,7 @@ if ($badLogin)
         <h1>Incorrect Password.  Please try again.</h1><br />       
     </div>
      <div class="centerbutton">
-        <input class="ex1" type="button" value="Continue" id="continue" name="continue" onclick="continue()" />
+        <input class="ex1" type="button" value="Continue" id="continue" name="continue" onclick="carryon()" />
     </div>
    </body>
    </html>

@@ -57,13 +57,12 @@ if (isset($_POST['signinname']) && isset($_POST['signinpwd']))
 }
 
 if ($badLogin)
-{
-   alert("Incorrect Password!   Try Again!");
-   header("Location: sign_in.php");
+{  
+   header("Location: incorrect.php");
    die();
 }
 
-alert("ERROR! Try agian.")
+
 header("Location: sign_in.php");
 die();
 

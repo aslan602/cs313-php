@@ -24,7 +24,8 @@
         <div class="col-6">
            <p class="center fancy pad">Please select an action:</p><br /> <br />
         </div>
-		<div class="col-11">
+		<div class="col-12">
+		   <br />
 		</div>
 		<div class="col-3">
 		</div>

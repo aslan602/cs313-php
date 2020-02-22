@@ -33,8 +33,6 @@ $statement->bindValue(':username', $username);
 $statement->bindValue(':password', $hashedPassword);
 $statement->execute();
 
-alert("Account Created!");
-
 header("Location: sign_in.php");
 die();
 

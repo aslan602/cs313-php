@@ -168,6 +168,10 @@ input.ex1:hover {
     width: 400px;
 }
 
+.toppad {
+    padding-top: 125px;
+}
+
 div {
     border: 2px solid red;
 }

@@ -19,7 +19,7 @@
     <div class="heading col-8">
         Journal
     </div>
-	<div class="col-4">
+	<div class="col-4 toppad">
 	    <input type="button" class="button ex1" value="Return to Menu" onclick="returntomenu()" />
 	</div>
     <div class="fancy col-8 timestamppad">Journal Entry for Time Stamp: <?php echo $_SESSION['timestamp'] ?></div>

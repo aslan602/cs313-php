@@ -1,0 +1,68 @@
+﻿body {
+    background-image: url("stars.jpg");
+    background-repeat: no-repeat;
+    font: 100% Courier New;
+    color: #84c754;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+}
+
+.center {
+    text-align: center;
+}
+
+.toppad {
+    padding-top: 300px;
+}
+
+.middletop {
+    padding-left:600px;
+}
+
+.middletopA {
+    padding-left: 550px;
+}
+
+.instrucpad {
+    padding-left:700px;
+}
+
+.createpad {
+    padding-left: 650px;
+}
+
+.centerbutton {
+    padding-left: 800px;
+}
+
+.formpad {
+    padding-left:775px;
+}
+
+
+input.ex1:hover {
+    background-color: black;
+    color: #84c754;
+}

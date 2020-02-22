@@ -1,0 +1,33 @@
+<?php
+
+?>
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Create Account Page</title>
+    <link rel="stylesheet" type="text/css" href="sign_in.css">
+    <script src="sign_in.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+   <div class="toppad middletopA">
+        <h1>Please choose a username and a password</h1><br />
+    </div>
+    <div class="instrucpad">
+        <h3>* Passworh must be 8 charaters</h3><br /><br />
+    </div>
+    <div class="formpad">
+        <form action="createaccount.php" method="post">
+            <label for="signinname">Username</label>
+            <input type="text" id="signinname" name="signinname" /><br /><br />
+            <label for="signinpwd">Password</label>
+            <input type="password" name="signinpwd" id="signinpwd" minlength="8" /><br /><br />
+            <input class="ex1" type="submit" value="Create Account" /><br /><br />
+        </form>
+    </div>
+</body>
+</html>

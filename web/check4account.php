@@ -84,8 +84,5 @@ if ($badLogin)
 }
 
 
-header("Location: sign_in.php");
-die();
-
 ?>
 

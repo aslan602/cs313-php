@@ -29,7 +29,7 @@
 		</div>
 		
 		<div class="col-12 biggerpad">
-		   <input type="button" value="Create Account" class="button ex1" onclick="createaccount()" />
+		   <input type="button" value="Create Account" class="button ex1" onclick="createaccount()" /><br /><br />
 		</div>
 
 		<div class="col-12 biggerpad">

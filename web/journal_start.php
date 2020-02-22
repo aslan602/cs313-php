@@ -28,10 +28,10 @@
 		</div>
 		<div class="col-3">
 		</div>
-		<div class="col-4">
+		<div class="col-2">
 		   <input type="button" value="Create Account" class="button ex1" onclick="createaccount()" />
 		</div>
-		<div>
+		<div class="col-2">
 		   <input type="button" value="Sign In" class="button ex1" onclick="signin()" />
 		</div>
 

@@ -3,8 +3,7 @@ $username = $_POST['signinname'];
 $password = $_POST['signinpwd'];
 
 
-if (!isset($username) || $username == ""
-	|| !isset($password) || $password == "")
+if (!isset($username) || $username == "" || !isset($password) || $password == "")
 {
 	alert("ERROR! Try again!");
 	header("Location: create.php");
@@ -24,7 +23,7 @@ $db = get_db();
 * program table being used for each program
 ***************************************************************/
 
-$query = 'INSERT INTO journalaccounts (username, password) VALUES (:username, :password)';
+$query = "INSERT INTO journalaccounts (username, password) VALUES (:username, :password)";
 
 /***************************************************************
 * QUERY STATEMENT END

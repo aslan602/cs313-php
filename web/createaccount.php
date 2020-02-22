@@ -32,8 +32,25 @@ $statement = $db->prepare($query);
 $statement->bindValue(':username', $username);
 $statement->bindValue(':password', $hashedPassword);
 $statement->execute();
-
-
-header("Location: sign_in.php");
-die();
 ?>
+
+<!DOCTYPE html>
+
+   <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+       <meta charset="utf-8" />
+       <title>Sign-in Page</title>
+       <link rel="stylesheet" type="text/css" href="sign_in.css">
+       <script src="sign_in.js"></script>
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   </head>
+   <body>
+    <div class="middletop toppad">
+        <h1>Account Created Successfully.  Please sign-in to continue.</h1><br />       
+    </div>
+     <div class="centerbutton">
+        <input class="ex1" type="button" value="Continue" id="continue" name="continue" onclick="carryon()" />
+    </div>
+   </body>
+   </html>

@@ -26,6 +26,8 @@
         </div>
 		<div class="col-11">
 		</div>
+		<div class="col-3">
+		</div>
 		<div class="col-4">
 		   <input type="button" value="Create Account" class="button ex1" onclick="createaccount()" />
 		</div>
